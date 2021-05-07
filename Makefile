@@ -4,4 +4,4 @@ mysql:
 createdb:
 	docker exec -it mysql8 mysql -u root -p -e "CREATE DATABASE test;"
 
-.PHONY: postgres createdb dropdb migrateup migratedown migrateup1 migratedown1 sqlc test server mock
+.PHONY: mysql createdb dropdb migrateup migratedown migrateup1 migratedown1 sqlc test server mock
