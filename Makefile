@@ -4,11 +4,11 @@ mysql:
 execmysql:
 	docker exec -it mysql8 mysql -u root -p
 createdb:
-	docker exec -it mysql8 mysql -u root -p -e "CREATE DATABASE tiki_smarter;"
+	docker exec -it mysql8 mysql -u root -p -e "CREATE DATABASE simple_bank;"
 migrateup:
-	migrate  -path ./db/migration -database "mysql://root:secret@tcp(localhost:3306)/tiki_smarter?charset=utf8&parseTime=True&loc=Local&multiStatements=true" -verbose up
+	migrate  -path ./db/migration -database "mysql://root:secret@tcp(localhost:3306)/simple_bank?charset=utf8&parseTime=True&loc=Local&multiStatements=true" -verbose up
 migratedown:
-	migrate  -path ./db/migration -database "mysql://root:secret@tcp(localhost:3306)/tiki_smarter?charset=utf8&parseTime=True&loc=Local&multiStatements=true" -verbose down
+	migrate  -path ./db/migration -database "mysql://root:secret@tcp(localhost:3306)/simple_bank?charset=utf8&parseTime=True&loc=Local&multiStatements=true" -verbose down
 
 init_schema:
 	migrate create -ext sql -dir ./db/migration -seq $(name)
