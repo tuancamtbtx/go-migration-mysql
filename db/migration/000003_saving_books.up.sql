@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS saving_books (
   id VARCHAR(255) NOT NULL PRIMARY KEY,
-  user_id varchar(255) NOT NULL,
-  amount DECIMAL(5,2) NOT NULL,
+  customer_id varchar(255) NOT NULL,
+  amount DECIMAL(19 , 4 ) NOT NULL,
   type SMALLINT NOT NULL,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME NULL ON UPDATE CURRENT_TIMESTAMP,
